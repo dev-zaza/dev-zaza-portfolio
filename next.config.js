@@ -5,8 +5,8 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  basePath: process.env.NODE_ENV === 'production' ? '/dev-zaza-portfolio' : '',
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/dev-zaza-portfolio' : '',
+  basePath: '',
+  assetPrefix: '',
 };
 
 module.exports = nextConfig;

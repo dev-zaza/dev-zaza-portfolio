@@ -56,22 +56,12 @@ pnpm run build
 
 The output will be in the `out` directory.
 
-## Deployment to GitHub Pages
+## Deployment to GitHub Pages (root domain)
 
-This repository is configured to automatically deploy to GitHub Pages using GitHub Actions when you push to the `main` branch.
-
-### Manual Setup
-
-1. Go to your repository settings on GitHub
-2. Navigate to "Pages" in the sidebar
-3. Under "Source", select "GitHub Actions"
-4. The workflow will automatically deploy on push to `main`
-
-### Important Notes
-
-- The site is configured to work with the repository name as the base path
-- If your repository is named `dev-zaza-portfolio`, the site will be available at `https://dev-zaza.github.io/dev-zaza-portfolio/`
-- If you want to use a custom domain or deploy to the root of your GitHub Pages, update the `basePath` in `next.config.js`
+- Site is configured for `dev-zaza.github.io` (root) with `basePath` and `assetPrefix` empty in `next.config.js`.
+- Workflow: `.github/workflows/deploy.yml` builds to `out/` and deploys via GitHub Actions.
+- Target repo for Pages: `dev-zaza/dev-zaza.github.io`. Push `main` there (or add it as a second remote).
+- In that repo, set Pages source to GitHub Actions. A push to `main` triggers build + deploy.
 
 ## Customization
 
